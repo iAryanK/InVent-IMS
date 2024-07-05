@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ThemeToggle from "../global/theme-toggle";
-import { UserButton } from "./CustomButtons";
+import { SignInButton, UserButton } from "./CustomButtons";
 
 const Navigation = () => {
   return (
@@ -18,7 +18,7 @@ const Navigation = () => {
         <span className="text-4xl font-bold hidden md:flex"> InVent. IMS</span>
       </aside>
 
-      <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] tracking-wider">
+      <nav className="hidden lg:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] tracking-wider">
         <ul className="flex items-center justify-center gap-8">
           <Link href={"#"}>Home</Link>
           <Link href={"#"}>Features</Link>
@@ -28,12 +28,7 @@ const Navigation = () => {
       </nav>
 
       <aside className="flex items-center gap-2">
-        <Link
-          href={"/home"}
-          className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80 tracking-wide font-semibold"
-        >
-          SignIn
-        </Link>
+        <SignInButton text="SignIn" className="font-semibold text-lg" />
         <UserButton />
         <ThemeToggle />
       </aside>

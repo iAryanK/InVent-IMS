@@ -1,5 +1,5 @@
 import { ContainerScroll } from "@/components/aceternity/container-scroll-animation";
-import { SignInButton } from "@/components/shared/CustomButtons";
+import { InstallAppButton } from "@/components/shared/CustomButtons";
 import Features from "@/components/landing/Features";
 import StepGuide from "@/components/landing/StepGuide";
 import { ArrowDownToLine } from "lucide-react";
@@ -19,10 +19,11 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="flex justify-center">
-          <SignInButton
+        <div className="flex justify-center mt-5">
+          <InstallAppButton
             text="Install InVent. IMS App"
             icon={<ArrowDownToLine strokeWidth={3} />}
+            className="font-bold text-xl"
           />
         </div>
 

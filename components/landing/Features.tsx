@@ -6,7 +6,7 @@ type Props = {};
 
 const Features = (props: Props) => {
   return (
-    <section className="max-w-7xl mx-auto mt-20 px-5">
+    <section className="max-w-7xl mx-auto  px-5">
       <h2 className="text-5xl md:text-7xl lg:text-[100px] font-bold text-center select-none tracking-wide">
         Features
       </h2>
