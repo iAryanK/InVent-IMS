@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import NextAuthProvider from "@/components/providers/nextauth-provider";
+import Navigation from "@/components/shared/Navigation";
+import Footer from "@/components/shared/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Rajdhani({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "InVent IMS",
@@ -18,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -26,7 +31,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextAuthProvider>{children}</NextAuthProvider>
+          <NextAuthProvider>
+            <Navigation />
+            {children}
+            <Footer />
+          </NextAuthProvider>
         </ThemeProvider>
       </body>
     </html>
