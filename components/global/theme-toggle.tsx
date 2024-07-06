@@ -27,7 +27,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <Toggle>
+    <Toggle className="w-fit">
       {!isLight ? (
         <Sun
           onClick={enableLightMode}

@@ -1,7 +1,10 @@
 import {
+  CircleUser,
+  Database,
   DatabaseZap,
   FileSpreadsheet,
   Grid2x2Check,
+  LayoutDashboard,
   ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
@@ -42,5 +45,23 @@ export const BentoItems = [
     header: <Skeleton />,
     className: "col-span-2",
     icon: <ShieldCheck className="h-4 w-4 text-neutral-500" />,
+  },
+];
+
+export const SidebarItems = [
+  {
+    title: "Dashboard",
+    icon: LayoutDashboard,
+    href: "/home",
+  },
+  {
+    title: "Database",
+    icon: Database,
+    href: "/database",
+  },
+  {
+    title: "Profile",
+    icon: CircleUser,
+    href: "/profile",
   },
 ];

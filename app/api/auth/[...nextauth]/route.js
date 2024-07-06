@@ -22,7 +22,6 @@ const handler = NextAuth({
     },
     async session({ session, token }) {
       session.accessToken = token.accessToken;
-      console.log("[SESSION]", session);
       return session;
     },
   },

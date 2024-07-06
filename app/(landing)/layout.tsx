@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import NextAuthProvider from "@/components/providers/nextauth-provider";
 import Navigation from "@/components/shared/Navigation";
